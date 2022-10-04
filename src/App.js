@@ -1,26 +1,23 @@
+import React from 'react';
 import './App.css';
+import Navbar from './components/navbar';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Home from './pages';
+import About from './pages/about';
+import Projects from './pages/projects';
+import ContactMe from './pages/contact';
 
-function App() {
+const App = () => {
     return (
-        <div className="App">
-            <header className="App-header">
-                <p>
-                    Hello World I guess...
-                </p>
-
-                {/*<iframe title="towerOfHanoi" src="*/}
-                {/*        https://itch.io/embed-upload/4609281?color=333333" allowFullScreen="" width="1280"*/}
-                {/*        height="720"><a href="https://c0c0barbet.itch.io/tower-of-hanoi-redux">Play Tower of Hanoi Redux*/}
-                {/*    on*/}
-                {/*    itch.io</a></iframe>*/}
-                {/*<iframe title="jailEscape" src="https://itch.io/embed-upload/4608389?color=c7c7c7" allowFullScreen=""*/}
-                {/*        width="1280"*/}
-                {/*        height="720"><a href="https://vesiiy.itch.io/prison-escape">Play Prison Escape: Freedom*/}
-                {/*    Awaits on*/}
-                {/*    itch.io</a></iframe>*/}
-
-            </header>
-        </div>
+        <Router>
+            <Navbar />
+            <Routes>
+                <Route path='/' exact element={<Home/>} />
+                <Route path='/about' element={<About/>} />
+                <Route path='/projects' element={<Projects/>} />
+                <Route path='/contact' element={<ContactMe/>} />
+            </Routes>
+        </Router>
     );
 }
 
