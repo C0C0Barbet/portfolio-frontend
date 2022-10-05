@@ -1,21 +1,19 @@
-import React from 'react';
+import React from "react";
+import { Unity, useUnityContext } from "react-unity-webgl";
 
 const Hanoi = () => {
+    const { unityProvider } = useUnityContext({
+        loaderUrl: "build/Hanoi Towers Redux WebGL.loader.js",
+        dataUrl: "build/Hanoi Towers Redux WebGL.data",
+        frameworkUrl: "build/Hanoi Towers Redux WebGL.framework.js",
+        codeUrl: "build/Hanoi Towers Redux WebGL.wasm",
+    });
+
     return (
-        <div
-            style={{
-                display: 'flex',
-                justifyContent: 'Center',
-                alignItems: 'Center'
-            }}
-        >
-            <h1>Tower of Hanoi Redux</h1>
-            <div>
-                <iframe title="towerOfHanoi" src="https://itch.io/embed-upload/4609281?color=333333" allowFullScreen="" width="1280"
-                        height="720"><a href="https://c0c0barbet.itch.io/tower-of-hanoi-redux">Play
-                    Tower of Hanoi Redux on itch.io</a></iframe>
-            </div>
-        </div>
+        <Unity
+            unityProvider={ unityProvider }
+            style={{ width: 800, height: 600 }}
+        />
     );
 };
 

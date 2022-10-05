@@ -41,47 +41,30 @@ const pages = [Hanoi, Prison];
 
 
 function TabGroup() {
-    const [active, setActive] = useState(types[0]);
+    const [active, setActive] = useState('');
     const mapping = () => {
-        pages.map((arr) => {
-            return <p>{arr}</p>
+        pages.map((page) => {
+            return {page}
         })
     }
     return (
         <>
             <ButtonGroup>
-            {types.map((data, i) =>
-                <button onClick={() => setActive(pages[i])}>
-                    {data}
-                </button>
-            )}
-            {active}
+                {types.map((title, i) =>
+                    <Tab
+                        onClick={() => setActive(pages[i])}
+                        key="{title.}"
+                    >
+                        {title}
+                    </Tab>
+                )}
             </ButtonGroup>
+            <div key="{active}">
+                {active}
+            </div>
             </>
     );
 };
-
-    /*return (
-        <>
-            <ButtonGroup>
-                {types.map(type => (
-                    <Tab
-                        key={type}
-                        active={active === type}
-                        onClick={() => setActive(type)}
-                    >
-                        {type}
-                    </Tab>
-                ))}
-
-            </ButtonGroup>
-            <p />
-            <div>
-                DisplayPage({active})
-            </div>
-        </>
-    );
-}*/
 
 const Projects = () => {
     return (
