@@ -35,14 +35,33 @@ const ButtonGroup = styled.div`
   display: flex;
 `;
 
-const types = [
-    {id: 'Tower of Hanoi Redux', page: [Hanoi]},
-    {id: 'Prison Escape: Freedom Awaits', page: [Prison]}
-];
+const types = ['Tower of Hanoi Redux', 'Prison Escape: Freedom Awaits'];
+
+const pages = [Hanoi, Prison];
+
 
 function TabGroup() {
     const [active, setActive] = useState(types[0]);
+    const mapping = () => {
+        pages.map((arr) => {
+            return <p>{arr}</p>
+        })
+    }
     return (
+        <>
+            <ButtonGroup>
+            {types.map((data, i) =>
+                <button onClick={() => setActive(pages[i])}>
+                    {data}
+                </button>
+            )}
+            {active}
+            </ButtonGroup>
+            </>
+    );
+};
+
+    /*return (
         <>
             <ButtonGroup>
                 {types.map(type => (
@@ -58,11 +77,11 @@ function TabGroup() {
             </ButtonGroup>
             <p />
             <div>
-                {active}
+                DisplayPage({active})
             </div>
         </>
     );
-}
+}*/
 
 const Projects = () => {
     return (
