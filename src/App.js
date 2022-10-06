@@ -1,21 +1,21 @@
 import React from 'react';
 import './App.css';
 import Navbar from './components/navbar';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Home from './pages';
-import About from './pages/about';
-import Projects from './pages/projects';
-import ContactMe from './pages/contact';
+import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
+import HomePage from './pages/home/homePage';
+import AboutMe from './pages/about/aboutMe';
+import ContactMe from './pages/contact/contactMe';
+import ProjectsPage from "./pages/projects/projectsPage";
 
 const App = () => {
     return (
         <Router>
-            <Navbar />
+            <Navbar/>
             <Routes>
-                <Route path='/' exact element={<Home/>} />
-                <Route path='/about' element={<About/>} />
-                <Route path='/projects' element={<Projects/>} />
-                <Route path='/contact' element={<ContactMe/>} />
+                <Route path='/' exact element={<HomePage/>}/>
+                <Route path='/about' element={<AboutMe/>}/>
+                <Route path='/projects' element={<ProjectsPage/>}/>
+                <Route path='/contact' element={<ContactMe/>}/>
             </Routes>
         </Router>
     );

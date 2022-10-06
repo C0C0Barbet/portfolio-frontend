@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Home = () => {
+const AboutMe = () => {
     return (
         <div
             style={{
@@ -9,9 +9,9 @@ const Home = () => {
                 alignItems: 'Center'
             }}
         >
-            <h1>There exists another world</h1>
+            <h1>My name is Colin Burgess</h1>
         </div>
     );
 };
 
-export default Home;
+export default AboutMe;

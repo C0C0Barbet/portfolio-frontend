@@ -24,3 +24,4 @@ function useWindowDimensions() {
 }
 
 export {getWindowDimensions, useWindowDimensions}
+
