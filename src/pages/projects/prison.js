@@ -1,39 +1,26 @@
-import React from 'react';
+import React from "react";
 import { Unity, useUnityContext } from "react-unity-webgl";
 
-/*
-const Prison = () => {
-    return (
-        <div>
-            <div>
-                <h1> Prison Escape: Freedom Awaits </h1>
-            </div>
-            <div>
-                <iframe title="prisonEscape" src="https://itch.io/embed-upload/4608389?color=000000" allowFullScreen="" width="1280"
-                        height="720"><a href="https://vesiiy.itch.io/prison-escape">Play Prison Escape:
-                    Freedom Awaits on itch.io</a></iframe>
-            </div>
-        </div>
-    );
-};
-*/
-
-const Prison = () => {
+export const PrisonGame = () => {
     const { unityProvider } = useUnityContext({
         loaderUrl: "build/My First Game Jam 2021 WebGL.loader.js",
         dataUrl: "build/My First Game Jam 2021 WebGL.data",
         frameworkUrl: "build/My First Game Jam 2021 WebGL.framework.js",
-        codeUrl: "build/My First Game Jam 2021 WebGL.data",
+        codeUrl: "build/My First Game Jam 2021 WebGL.wasm",
     });
     return (
         <Unity
             unityProvider={unityProvider}
-            style={{ width: 1000, height: 1000 }}
+            style={{ width: 640, height: 360 }}
         />
     );
 };
 
-
-
-
-export default Prison;
+export const PrisonLink = () => {
+    return (
+        <iframe title={"prisonLink"}
+            src="https://itch.io/embed/1120184?border_width=5&amp;bg_color=d1d1d1&amp;link_color=5bf5fa&amp;border_color=000000"
+            width="560" height="175"><a href="https://vesiiy.itch.io/prison-escape">Prison Escape:
+            Freedom Awaits by Vesiy, C0C0Barbet</a></iframe>
+    );
+};

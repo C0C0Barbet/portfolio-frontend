@@ -1,81 +1,141 @@
 import React, { useState } from 'react';
-import styled from 'styled-components';
-import Hanoi from './projects/hanoi';
-import Prison from './projects/prison';
+import { HanoiGame, HanoiLink } from './projects/hanoi';
+import { PrisonGame, PrisonLink } from './projects/prison';
+import {useWindowDimensions} from "./utilities/deviceViewport";
 
-
-const Tab = styled.button`
-  font-size: 20px;
-  padding: 10px 60px;
-  cursor: pointer;
-  opacity: 0.6;
-  background: white;
-  border: 0;
-  outline: 0;
-  ${({ active }) =>
-    active &&
-    `
-    border-bottom: 2px solid black;
-    opacity: 1;
-  `}
-`;
 
 const header = {
     display: 'flex',
+    padding: '10px',
+    justifyContent: 'Center',
+    textAlign: 'Center'
+}
+
+const buttonGroup = {
+    display: 'grid',
+    gridTemplateColumns: '5% 30% 30% 30% 5%',
+    gridTemplateRows: '100px',
     justifyContent: 'Center',
     alignItems: 'Center'
 }
-const projects = {
+
+const projOneButtonTrad = {
+    fontFamily: 'fantasy',
+    fontSize:'15px',
+    gridColumn: '2',
+    height: '50%',
+    width: '100%'
+}
+
+const projTwoButtonTrad = {
+    fontFamily: 'fantasy',
+    fontSize:'15px',
+    gridColumn: '4',
+    height: '50%',
+    width: '100%',
+}
+
+const projOneButtonMob = {
+    fontFamily: 'fantasy',
+    fontSize:'10px',
+    gridColumn: '2',
+    height: '50%',
+    width: '100%'
+}
+
+const projTwoButtonMob = {
+    fontFamily: 'fantasy',
+    fontSize:'10px',
+    gridColumn: '4',
+    height: '50%',
+    width: '100%',
+}
+
+const gameDisplay = {
     display: 'flex',
     justifyContent: 'Center',
-    alignItems: 'Center'
+    alignItems: 'Center',
+    padding: '2% 2% 2% 2%'
 }
 
-const ButtonGroup = styled.div`
-  display: flex;
-`;
-
-const types = ['Tower of Hanoi Redux', 'Prison Escape: Freedom Awaits'];
-
-const pages = [Hanoi, Prison];
-
-
-function TabGroup() {
-    const [active, setActive] = useState('');
-    const mapping = () => {
-        pages.map((page) => {
-            return {page}
-        })
-    }
-    return (
-        <>
-            <ButtonGroup>
-                {types.map((title, i) =>
-                    <Tab
-                        onClick={() => setActive(pages[i])}
-                        key="{title.}"
-                    >
-                        {title}
-                    </Tab>
-                )}
-            </ButtonGroup>
-            <div key="{active}">
-                {active}
-            </div>
-            </>
-    );
-};
-
 const Projects = () => {
-    return (
-        <div>
-            <h1 style={header}>Take a look at my projects <br /></h1>
-            <br />
-            <div style={projects}>
-                <TabGroup/>
+
+    const { height, width } = useWindowDimensions();
+
+    let [hasHanoiRender, setHanoiRender] = useState(false);
+    let [hasPrisonRender, setPrisonRender] = useState(false);
+    const showHanoi = () => {
+        setHanoiRender(hasHanoiRender = !hasHanoiRender);
+        setPrisonRender(false);
+    };
+    const showPrison = () => {
+        setPrisonRender(hasPrisonRender = !hasPrisonRender);
+        setHanoiRender(false);
+    };
+
+    if (width >= 800 && height >= 700) {
+        console.log("Displaying link");
+        return (
+            <div>
+                <h1 style={header}>Take a look at my projects </h1>
+                <div>
+                    <p> Width: { width } and Height: { height } </p>
+                </div>
+                <div style={buttonGroup}>
+                    <button style={projOneButtonTrad} onClick={showHanoi}>Tower of Hanoi Redux</button>
+                    <button style={projTwoButtonTrad} onClick={showPrison}>Prison Escape: Freedom Awaits</button>
+                </div>
+                <div>
+                    <div style={gameDisplay}>
+                        {hasHanoiRender && <HanoiGame/>}
+                        {hasPrisonRender && <PrisonGame/>}
+                    </div>
+                </div>
             </div>
-        </div>
-    );
+        );
+    }
+    else if (height > width) {
+        console.log("Displaying link");
+        return (
+            <div>
+                <h1 style={header}>Take a look at my projects </h1>
+                <div>
+                    <p> Width: { width } and Height: { height } </p>
+                </div>
+                <div style={buttonGroup}>
+                    <button style={projOneButtonMob} onClick={showHanoi}>Tower of Hanoi Redux</button>
+                    <button style={projTwoButtonMob} onClick={showPrison}>Prison Escape: Freedom Awaits</button>
+                </div>
+                <div>
+                    <div style={gameDisplay}>
+                        {hasHanoiRender && <HanoiLink/>}
+                        {hasPrisonRender && <PrisonLink/>}
+                    </div>
+                </div>
+            </div>
+        );
+    }
+
+    else {
+        return (
+            <div>
+                <h1 style={header}>Take a look at my projects </h1>
+                <div>
+                    <p> Width: { width } and Height: { height } </p>
+                </div>
+                <div style={buttonGroup}>
+                    <button style={projOneButtonTrad} onClick={showHanoi}>Tower of Hanoi Redux</button>
+                    <button style={projTwoButtonTrad} onClick={showPrison}>Prison Escape: Freedom Awaits</button>
+                </div>
+                <div>
+                    <div style={gameDisplay}>
+                        {hasHanoiRender && <HanoiLink/>}
+                        {hasPrisonRender && <PrisonLink/>}
+                    </div>
+                </div>
+            </div>
+        );
+    }
 };
 
 export default Projects;
