@@ -1,6 +1,6 @@
 import React from 'react';
 import '../../projectsStyling.css';
-import HanoiLink from "../gameStuffs/hanoiLink";
+import HanoiLink from "../desktop/gameStuffs/hanoiLink";
 
 
 const HanoiMini = () => {

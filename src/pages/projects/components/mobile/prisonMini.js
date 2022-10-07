@@ -1,6 +1,6 @@
 import React from 'react';
 import '../../projectsStyling.css';
-import PrisonLink from "../gameStuffs/prisonLink";
+import PrisonLink from "../desktop/gameStuffs/prisonLink";
 
 
 const PrisonMini = () => {

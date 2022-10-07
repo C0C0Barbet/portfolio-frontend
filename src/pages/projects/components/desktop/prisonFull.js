@@ -1,14 +1,26 @@
 import React from 'react';
 import '../../projectsStyling.css';
-import {PrisonGame} from '../gameStuffs/prisonGame';
+import {useWindowDimensions} from "../../../../baseUtilities/deviceViewport";
+import PrisonGameGreater from "./gameStuffs/prisonGameGreater";
+import PrisonGameLesser from "./gameStuffs/prisonGameLesser";
 
 
 const PrisonFull = () => {
+
+    const {height, width} = useWindowDimensions();
+
+    if (width > 720 && height > 720) {
+        return (
+            <div>
+                {<PrisonGameGreater/>}
+            </div>
+        );
+    }
     return (
         <div>
-            {<PrisonGame/>}
+            {<PrisonGameLesser/>}
         </div>
     );
-}
+};
 
 export default PrisonFull;

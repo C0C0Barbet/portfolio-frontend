@@ -10,15 +10,41 @@ const DynamicSize = () => {
     const {height, width} = useWindowDimensions();
 
     let [hasHanoiRender, setHanoiRender] = useState(false);
+
     const showHanoi = () => {
         setHanoiRender(hasHanoiRender = !hasHanoiRender);
         setPrisonRender(false);
     };
+
     let [hasPrisonRender, setPrisonRender] = useState(false);
+
     const showPrison = () => {
         setPrisonRender(hasPrisonRender = !hasPrisonRender);
         setHanoiRender(false);
     };
+
+/* Maybe use this or unload
+
+Continue looking into error "Canvas is null"
+    useEffect(() => {
+            return () => {
+                if (hasHanoiRender === true && hasPrisonRender === false) {
+                    detachAndUnloadImmediateH()
+                }
+            }
+        },
+        [hasHanoiRender, hasPrisonRender, detachAndUnloadImmediateH])
+
+
+    useEffect(() => {
+            return () => {
+                if (hasHanoiRender === false && hasPrisonRender === true) {
+                    detachAndUnloadImmediateP()
+                }
+            }
+        },
+        [hasPrisonRender, hasHanoiRender, detachAndUnloadImmediateP])
+*/
 
     if (width > height) {
         return (
