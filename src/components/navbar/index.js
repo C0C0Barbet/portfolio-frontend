@@ -1,33 +1,47 @@
-import React from 'react';
-import {
-    Nav,
-    NavLink,
-    Bars,
-    NavMenu
-} from './NavbarElements';
+import React, {useState} from 'react';
+import {Link} from "react-router-dom";
+import './navbarStyling.css';
+import {FiMenu, FiX} from "react-icons/fi";
+import MeInVogue from "../../baseUtilities/photoOfMe";
 
 const Navbar = () => {
-    return (
-        <>
-            <Nav>
-                <Bars />
+    const [open, setOpen] = useState(false);
 
-                <NavMenu>
-                    <NavLink to='/' activestyle="true">
-                        <h2>Home</h2>
-                    </NavLink>
-                    <NavLink to='/about' activestyle="true">
-                        <h2>About</h2>
-                    </NavLink>
-                    <NavLink to='/projects' activestyle="true">
-                        <h2>Projects</h2>
-                    </NavLink>
-                    <NavLink to='/contact' activestyle="true">
-                        <h2>Contact Me</h2>
-                    </NavLink>
-                </NavMenu>
-            </Nav>
-        </>
+    const handleClick = () => {
+        setOpen(!open);
+    };
+
+    return (
+        <nav className="navbar">
+            <Link to="/">
+                <div className="nav-text">
+                    Colin Burgess
+                    {/*
+                    <MeInVogue/>
+                    */}
+                </div>
+            </Link>
+            <div onClick={handleClick} className="nav-icon">
+                {open ? <FiX/> : <FiMenu/>}
+            </div>
+            <ul className={open ? 'nav-links active' : 'nav-links'}>
+                <li className="nav-element">
+                    <Link to='/about' className="nav-link" onClick={() => setOpen(false)}>
+                        <h4>About Me</h4>
+                    </Link>
+                </li>
+                <li className="nav-element">
+                    <Link to='/projects' className="nav-link" onClick={() => setOpen(false)}>
+                        <h4>Projects</h4>
+                    </Link>
+                </li>
+                <li className="nav-element">
+                    <Link to='/contact' className="nav-link" onClick={() => setOpen(false)}>
+                        <h4>Contact Me</h4>
+                    </Link>
+                </li>
+            </ul>
+        </nav>
     );
 };
 

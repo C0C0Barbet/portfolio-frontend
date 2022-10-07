@@ -23,28 +23,28 @@ const DynamicSize = () => {
         setHanoiRender(false);
     };
 
-/* Maybe use this or unload
+    /* Maybe use this or unload
 
-Continue looking into error "Canvas is null"
-    useEffect(() => {
-            return () => {
-                if (hasHanoiRender === true && hasPrisonRender === false) {
-                    detachAndUnloadImmediateH()
+    Continue looking into error "Canvas is null"
+        useEffect(() => {
+                return () => {
+                    if (hasHanoiRender === true && hasPrisonRender === false) {
+                        detachAndUnloadImmediateH()
+                    }
                 }
-            }
-        },
-        [hasHanoiRender, hasPrisonRender, detachAndUnloadImmediateH])
+            },
+            [hasHanoiRender, hasPrisonRender, detachAndUnloadImmediateH])
 
 
-    useEffect(() => {
-            return () => {
-                if (hasHanoiRender === false && hasPrisonRender === true) {
-                    detachAndUnloadImmediateP()
+        useEffect(() => {
+                return () => {
+                    if (hasHanoiRender === false && hasPrisonRender === true) {
+                        detachAndUnloadImmediateP()
+                    }
                 }
-            }
-        },
-        [hasPrisonRender, hasHanoiRender, detachAndUnloadImmediateP])
-*/
+            },
+            [hasPrisonRender, hasHanoiRender, detachAndUnloadImmediateP])
+    */
 
     if (width > height) {
         return (
@@ -54,6 +54,7 @@ Continue looking into error "Canvas is null"
                 </div>
                 <div className={"buttonGroup"}>
                     <button className={"button-Traditional"} onClick={showHanoi}>Tower of Hanoi Redux</button>
+                    <div className="buttonDivider"/>
                     <button className={"button-Traditional"} onClick={showPrison}>Prison Escape: Freedom Awaits
                     </button>
                 </div>
