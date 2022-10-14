@@ -15,13 +15,19 @@
     text-decoration: none;
     color: white;
     justify-self: center;
+    padding-right: 20px;
 }
 
 .nav-links {
     display: grid;
-    grid-template-columns: repeat(3, auto);
-    grid-gap: 100px;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-gap: 10px;
     list-style: none;
+}
+
+.nav-element {
+    display: flex;
+    justify-content: center;
 }
 
 .nav-link {
