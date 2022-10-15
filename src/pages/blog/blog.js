@@ -1,25 +1,19 @@
 import React from 'react';
 import {BlogsFound} from "./blogFetcher/blogFetch";
+import './blogStyling.css';
 
 const Blog = () => {
     return (
-        <div
-            style={{
-                display: 'flex',
-                justifyContent: 'Center',
-                alignItems: 'Center'
-            }}
-        >
+        <div className="blog-page">
             {BlogsFound.map(blogs => (
-                <ul className="blog-element">
-                    <div className="blog-title">
+                <section className="blog-elements">
+                    <h3 className="blog-title">
                         {blogs.title}
-                    </div>
-                    <div className="blog-content">
+                    </h3>
+                    <p className="blog-content">
                         {blogs.textBlurb}
-                    </div>
-                    <br/>
-                </ul>
+                    </p>
+                </section>
             ))}
         </div>
     );

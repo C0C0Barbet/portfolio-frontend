@@ -1,0 +1,11 @@
+.about-container {
+    position: relative;
+    padding-top: 20px;
+    display: flex;
+    justify-content: Center;
+    align-items: Center;
+}
+
+.about-title {
+    align-self: center;
+}

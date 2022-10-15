@@ -1,0 +1,11 @@
+.home-container {
+    position: relative;
+    padding-top: 20px;
+    display: flex;
+    justify-content: Center;
+    align-items: Center;
+}
+
+.home-title {
+    align-self: center;
+}

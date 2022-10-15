@@ -1,0 +1,11 @@
+.contact-container {
+    position: relative;
+    padding-top: 20px;
+    display: flex;
+    justify-content: Center;
+    align-items: Center;
+}
+
+.contact-title {
+    align-self: center;
+}

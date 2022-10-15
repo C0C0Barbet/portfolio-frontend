@@ -1,15 +1,10 @@
 import React from 'react';
+import './homeStyling.css'
 
 const HomePage = () => {
     return (
-        <div
-            style={{
-                display: 'flex',
-                justifyContent: 'Center',
-                alignItems: 'Center'
-            }}
-        >
-            <h1>There exists another world</h1>
+        <div className="home-container">
+            <h1 className="home-title">There exists another world</h1>
         </div>
     );
 };

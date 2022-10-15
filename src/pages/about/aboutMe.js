@@ -1,15 +1,12 @@
 import React from 'react';
+import './aboutStyling.css'
 
 const AboutMe = () => {
     return (
-        <div
-            style={{
-                display: 'flex',
-                justifyContent: 'Center',
-                alignItems: 'Center'
-            }}
-        >
-            <h1>My name is Colin Burgess</h1>
+        <div className="about-container">
+            <h1 className="about-title">
+                My name is Colin Burgess
+            </h1>
         </div>
     );
 };

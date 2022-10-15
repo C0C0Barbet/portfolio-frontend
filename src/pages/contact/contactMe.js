@@ -1,15 +1,12 @@
 import React from 'react';
+import './contactStyling.css';
 
 const ContactMe = () => {
     return (
-        <div
-            style={{
-                display: 'flex',
-                justifyContent: 'Center',
-                alignItems: 'Center',
-            }}
-        >
-            <h1>Contact Me</h1>
+        <div className="contact-container">
+            <h1 className="contact-title">
+                Contact Me
+            </h1>
         </div>
     );
 };

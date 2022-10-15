@@ -49,9 +49,6 @@ const DynamicSize = () => {
     if (width > height) {
         return (
             <div>
-                <div>
-                    <p> Width: {width} and Height: {height} </p>
-                </div>
                 <div className={"buttonGroup"}>
                     <button className={"button-Traditional"} onClick={showHanoi}>Tower of Hanoi Redux</button>
                     <div className="buttonDivider"/>

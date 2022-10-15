@@ -1,4 +1,5 @@
 .navbar {
+    z-index: 1;
     height: 100%;
     width: 100%;
     background: linear-gradient(0deg, rgba(34, 193, 195, 1) 0%,
@@ -31,6 +32,7 @@
 }
 
 .nav-link {
+    font-size: 3vmax;
     text-decoration: none;
     color: white;
     transition: 0.3s all;
@@ -57,15 +59,16 @@
         position: absolute;
         text-align: center;
         width: 100%;
-        top: 80px;
-        left: -100%;
+        top: -140px;
         transition: 0.5s all;
+        z-index: -1;
     }
 
     .nav-links.active {
         background: linear-gradient(180deg, rgba(34, 193, 195, 1) 0%,
         rgba(150, 190, 116, 1) 75%,
         rgba(253, 45, 50, 1) 100%);
+        top: 100%;
         left: 0;
     }
 

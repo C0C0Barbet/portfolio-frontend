@@ -1,3 +1,8 @@
+.projects-page {
+    position: relative;
+    padding-top: 20px;
+}
+
 .header {
     font-size: x-large;
     font-family: 'Bebas Neue', sans-serif;
