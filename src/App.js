@@ -1,12 +1,14 @@
-import React from 'react';
+import React from 'react'
 import './App.css';
-import Navbar from './components/navbar';
+import Navbar from './components/navbar/navbar';
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import HomePage from './pages/home/homePage';
 import AboutMe from './pages/about/aboutMe';
 import ContactMe from './pages/contact/contactMe';
 import ProjectsPage from "./pages/projects/projectsPage";
 import Blog from "./pages/blog/blog";
+import Footer from "./components/footer/footer";
+
 
 const App = () => {
     return (
@@ -20,6 +22,7 @@ const App = () => {
                     <Route path='/projects' element={<ProjectsPage/>}/>
                     <Route path='/contact' element={<ContactMe/>}/>
                 </Routes>
+                <Footer/>
             </Router>
         </div>
     );
