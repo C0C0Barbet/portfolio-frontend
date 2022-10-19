@@ -4,7 +4,17 @@ import './homeStyling.css'
 const HomePage = () => {
     return (
         <div className="home-container">
-            <h1 className="home-title">There exists another world</h1>
+            <div className="home-grid">
+                <div className="home-i">
+                    <h1>I</h1>
+                </div>
+                <div className="home-am">
+                    <h1>Am</h1>
+                </div>
+                <div className="home-colin">
+                    <h1>Colin Burgess</h1>
+                </div>
+            </div>
         </div>
     );
 };
