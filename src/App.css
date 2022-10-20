@@ -4,3 +4,52 @@
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
 }
+
+/* If the button is not pressed */
+
+.app-entry.active {
+    display: flex;
+    justify-content: center;
+    visibility: visible;
+    margin-top: 15%;
+}
+
+.app-main {
+    visibility: visible;
+}
+
+.app-navbar {
+}
+
+.app-footer {
+}
+
+/* If the button is pressed */
+.app-entry {
+
+    visibility: hidden;
+}
+
+.app-navbar.active {
+}
+
+.app-footer.active {
+}
+
+/* button styling */
+
+.button-main{
+    width: 25vw;
+    height: 5rem;
+    font-size: unset;
+    font-family: 'Bebas Neue', sans-serif;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(84, 131, 161, 0.75) 25%, rgba(84, 161, 135, 0.5) 50%, rgba(84, 131, 161, 0.25) 75%, rgba(0, 0, 0, 0) 100%);
+    border: 0;
+    color: #fff;
+    letter-spacing: 3px;
+    border-radius: 10%;
+    outline: transparent;
+    position: relative;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
