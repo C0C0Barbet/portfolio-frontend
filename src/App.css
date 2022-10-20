@@ -21,7 +21,21 @@
 .app-navbar {
 }
 
-.app-footer {
+.nav-footer {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    text-align: center;
+    width: 10%;
+    top: 200px;
+    transition: 0.5s all;
+    z-index: -1;
+}
+
+.nav-footer.active {
+    padding-bottom: 1rem;
+    top: 100%;
+    left: 0;
 }
 
 /* If the button is pressed */
@@ -38,7 +52,7 @@
 
 /* button styling */
 
-.button-main{
+.button-main {
     width: 25vw;
     height: 5rem;
     font-size: unset;

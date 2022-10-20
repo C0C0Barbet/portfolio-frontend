@@ -18,26 +18,28 @@ const App = () => {
     };
     return (
         <div className="app">
-            <Router>
-                <div className={!initialized ? 'app-navbar' : 'app-navbar active'}>
-                    <Navbar/>
-                </div>
-                <Routes>
-                    <Route path='/' exact element={<HomePage/>}/>
-                    <Route path='/about' element={<AboutMe/>}/>
-                    <Route path='/blogs' element={<Blog/>}/>
-                    <Route path='/projects' element={<ProjectsPage/>}/>
-                    <Route path='/contact' element={<ContactMe/>}/>
-                </Routes>
-                <div className={!initialized ? 'app-entry active' : 'app-entry'}>
-                    <button className={"button-main"} onClick={handleEntry}>
-                        Enter Site
-                    </button>
-                </div>
-                <div className={!initialized ? 'app-footer' : 'app-footer active'}>
+            <div>
+                <Router>
+                    <div className={!initialized ? 'app-navbar' : 'app-navbar active'}>
+                        <Navbar/>
+                    </div>
+                    <Routes>
+                        <Route path='/' exact element={<HomePage/>}/>
+                        <Route path='/about' element={<AboutMe/>}/>
+                        <Route path='/blogs' element={<Blog/>}/>
+                        <Route path='/projects' element={<ProjectsPage/>}/>
+                        <Route path='/contact' element={<ContactMe/>}/>
+                    </Routes>
+                    <div className={!initialized ? 'app-entry active' : 'app-entry'}>
+                        <button className={"button-main"} onClick={handleEntry}>
+                            Enter Site
+                        </button>
+                    </div>
+                    <div className={!initialized ? 'app-footer' : 'app-footer active'}>
                         <Footer/>
-                </div>
-            </Router>
+                    </div>
+                </Router>
+            </div>
         </div>
     );
 }
