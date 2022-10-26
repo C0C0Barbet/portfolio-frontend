@@ -2,17 +2,17 @@ import React from "react";
 import {Unity, useUnityContext} from "react-unity-webgl";
 
 const HanoiGameGreater = () => {
-    const { unityProvider } = useUnityContext({
-        loaderUrl: "build/Hanoi Towers Redux WebGL.loader.js",
-        dataUrl: "build/Hanoi Towers Redux WebGL.data",
-        frameworkUrl: "build/Hanoi Towers Redux WebGL.framework.js",
-        codeUrl: "build/Hanoi Towers Redux WebGL.wasm",
+    const {unityProvider} = useUnityContext({
+        loaderUrl: "build/Hanoi Towers Redux 2022 WebGL.loader.js",
+        dataUrl: "build/Hanoi Towers Redux 2022 WebGL.data",
+        frameworkUrl: "build/Hanoi Towers Redux 2022 WebGL.framework.js",
+        codeUrl: "build/Hanoi Towers Redux 2022 WebGL.wasm",
     });
 
     return (
         <Unity
             unityProvider={unityProvider}
-            style={{ width: 1280, height: 720 }}
+            style={{width: 1280, height: 720}}
         />
     );
 };
