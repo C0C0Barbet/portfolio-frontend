@@ -1,9 +1,9 @@
 import React from 'react';
-import {Link} from "react-router-dom";
 import './footerStyling.css';
 import GithubImage from '../../filesToUse/images/github.png';
 import LinkedinImage from '../../filesToUse/images/linkedin.png';
 import ResumeImage from '../../filesToUse/images/resume.png';
+import ActualResume from '../../filesToUse/documents/Colin Burgess Resume.pdf';
 
 const Footer = () => {
 
@@ -21,9 +21,9 @@ const Footer = () => {
                     </a>
                 </li>
                 <li className="footer-elements">
-                    <Link to="https://github.com/Joeyryanbridges">
-                        <img src={ResumeImage} alt="Link to download my resume" className="image-icon"/>
-                    </Link>
+                    <a href={ActualResume} target='_blank' rel='noopener noreferrer'>
+                        <img src={ResumeImage} alt="Link to my resume" className="image-icon"/>
+                    </a>
                 </li>
             </ul>
         </nav>

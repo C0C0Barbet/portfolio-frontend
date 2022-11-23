@@ -11,7 +11,7 @@ const App = () => {
     };
     return (
         <div className="app">
-            <div>
+            <div className='app-navbar'>
                 <RoutingInfo initialized={initialized}/>
             </div>
             <div className={!initialized ? 'app-entry active' : 'app-entry'}>

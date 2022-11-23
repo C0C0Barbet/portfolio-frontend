@@ -14,7 +14,7 @@ const RoutingInfo = (props) => {
         <div className="app">
             <div className={!props.initialized ? 'routing-info' : 'routing-info.active '}>
                 <Router>
-                    <div className='app-navbar active'>
+                    <div className="navbar navbar-inverse">
                         <Navbar/>
                     </div>
                     <Routes>
