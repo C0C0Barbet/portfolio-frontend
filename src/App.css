@@ -18,6 +18,14 @@
     visibility: visible;
 }
 
+.routing-info.active {
+    visibility: visible;
+}
+
+.routing-info {
+    visibility: hidden;
+}
+
 .app-navbar {
 }
 
