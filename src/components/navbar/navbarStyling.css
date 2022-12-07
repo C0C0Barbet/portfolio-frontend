@@ -1,3 +1,7 @@
+.viewport-height {
+    height: 100vh;
+}
+
 .navbar {
     z-index: 1;
     height: 100%;
@@ -44,6 +48,7 @@
     grid-template-columns: 25% 25% 25% 25%;
     grid-gap: 10px;
     list-style: none;
+    width: 150%;
 }
 
 .nav-link {

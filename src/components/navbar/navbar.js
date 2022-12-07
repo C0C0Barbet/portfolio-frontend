@@ -12,8 +12,8 @@ const Navbar = () => {
     };
 
     return (
-        <nav>
-            <div className="container-fluid">
+        <div className="container-fluid">
+            <nav>
                 <div className="navbar-header">
                     <Link to="/">
                         <div className="navbar-brand">
@@ -47,8 +47,8 @@ const Navbar = () => {
                         </Link>
                     </li>
                 </ul>
-            </div>
-        </nav>
+            </nav>
+        </div>
     );
 };
 

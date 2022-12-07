@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 import './App.css';
 import RoutingInfo from "./components/navbar/RoutingInfo";
+import {Button} from "react-bootstrap";
 
 
 const App = () => {
@@ -9,16 +10,17 @@ const App = () => {
     const handleEntry = () => {
         setInitialized(!initialized);
     };
+
+    if (!initialized) {
+        return (
+            <div className='app-entry active align-items-center'>
+                <Button variant="outline-info" onClick={handleEntry}>What?</Button>
+            </div>
+        );
+    }
     return (
-        <div className="app">
-            <div className='app-navbar'>
-                <RoutingInfo initialized={initialized}/>
-            </div>
-            <div className={!initialized ? 'app-entry active' : 'app-entry'}>
-                <button className='button-main' onClick={handleEntry}>
-                    Enter Site
-                </button>
-            </div>
+        <div>
+            <RoutingInfo initialized={initialized}/>
         </div>
     );
 }
