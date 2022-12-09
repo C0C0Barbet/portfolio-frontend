@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 import './App.css';
-import RoutingInfo from "./components/navbar/RoutingInfo";
 import {Button} from "react-bootstrap";
+import RoutingInfo from "./components/navbar/RoutingInfo";
 
 
 const App = () => {
@@ -19,7 +19,7 @@ const App = () => {
         );
     }
     return (
-        <div>
+        <div className="initializedFade">
             <RoutingInfo initialized={initialized}/>
         </div>
     );

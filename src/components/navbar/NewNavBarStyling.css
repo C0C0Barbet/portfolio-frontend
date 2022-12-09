@@ -1,0 +1,8 @@
+.navBarImage {
+    width: auto;
+    max-height: 100px;
+}
+
+.transparentNavBar {
+    opacity: 0;
+}

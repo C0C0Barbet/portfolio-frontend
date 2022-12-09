@@ -6,6 +6,9 @@
 }
 
 /* If the button is not pressed */
+.initializedFade {
+    transition: opacity 5s linear;
+}
 
 .app-entry.active {
     display: flex;
