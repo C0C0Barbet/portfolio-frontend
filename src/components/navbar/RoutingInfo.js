@@ -9,31 +9,28 @@ import Footer from "../footer/footer";
 import MyLogin from "../../pages/login/myLogin";
 import {Row} from "react-bootstrap";
 import NewNavBar from "./NewNavBar";
+import "./NewNavBarStyling.css";
 
-const RoutingInfo = (props) => {
+const RoutingInfo = () => {
 
     return (
-        <div className="app">
-            <div className={!props.initialized ? 'routing-info' : 'routing-info.active '}>
-                <Router>
-                    <Row>
-                        <NewNavBar/>
-                    </Row>
-                    <Row className="align-items-center viewport-height">
-                        <Routes>
-                            <Route path='/' exact element={<HomePage/>}/>
-                            <Route path='/about' element={<AboutMe/>}/>
-                            <Route path='/blogs' element={<Blog/>}/>
-                            <Route path='/projects' element={<ProjectsPage/>}/>
-                            <Route path='/contact' element={<ContactMe/>}/>
-                            <Route path='/login4me' element={<MyLogin/>}/>
-                        </Routes>
-                    </Row>
-                    <Row className='app-footer active'>
-                        <Footer/>
-                    </Row>
-                </Router>
-            </div>
+        <div>
+            <Router>
+                <Row className="align-items-center viewport-height">
+                    <NewNavBar/>
+                    <Routes className='body'>
+                        <Route path='/' exact element={<HomePage/>}/>
+                        <Route path='/about' element={<AboutMe/>}/>
+                        <Route path='/blogs' element={<Blog/>}/>
+                        <Route path='/projects' element={<ProjectsPage/>}/>
+                        <Route path='/contact' element={<ContactMe/>}/>
+                        <Route path='/login4me' element={<MyLogin/>}/>
+                    </Routes>
+                </Row>
+                <Row>
+                    <Footer/>
+                </Row>
+            </Router>
         </div>
     );
 }
