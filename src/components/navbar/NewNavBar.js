@@ -13,7 +13,7 @@ const NewNavBar = () => {
                     <Col md={4} sm xs={3}>
                         <Navbar.Brand as={Link} to="/">
                             <div className="navbar-brand ">
-                                <Image className="d-inline-block align-bottom navBarImage" fluid roundedCircle src={Me}
+                                <Image className="d-inline-block navBarImage" fluid roundedCircle src={Me}
                                        alt="Yep, that's me!"/>{' '}
                                 Colin Burgess
                             </div>

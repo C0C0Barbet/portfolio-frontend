@@ -7,7 +7,6 @@ import ProjectsPage from "../../pages/projects/projectsPage";
 import ContactMe from "../../pages/contact/contactMe";
 import Footer from "../footer/footer";
 import MyLogin from "../../pages/login/myLogin";
-import {Row} from "react-bootstrap";
 import NewNavBar from "./NewNavBar";
 import "./NewNavBarStyling.css";
 
@@ -16,7 +15,7 @@ const RoutingInfo = () => {
     return (
         <div>
             <Router>
-                <Row className="align-items-center viewport-height">
+                <div className="align-items-center viewport-height">
                     <NewNavBar/>
                     <Routes className='body'>
                         <Route path='/' exact element={<HomePage/>}/>
@@ -26,10 +25,10 @@ const RoutingInfo = () => {
                         <Route path='/contact' element={<ContactMe/>}/>
                         <Route path='/login4me' element={<MyLogin/>}/>
                     </Routes>
-                </Row>
-                <Row>
+                </div>
+                <div>
                     <Footer/>
-                </Row>
+                </div>
             </Router>
         </div>
     );
