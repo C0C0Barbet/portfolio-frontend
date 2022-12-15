@@ -9,6 +9,7 @@
     bottom: 0;
     left: 0;
     width: 100%;
+    height: fit-content;
 }
 
 .footer {
@@ -29,7 +30,6 @@
 }
 
 .image-icon {
-    font-size: 1vmax;
-    height: 30px;
-    width: 30px;
+    height: 28px;
+    width: 28px;
 }
