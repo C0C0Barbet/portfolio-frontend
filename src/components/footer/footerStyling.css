@@ -3,7 +3,7 @@
     background: linear-gradient(180deg, rgba(34, 193, 195, 1) 0%,
     rgba(150, 190, 116, 1) 50%, rgba(253, 45, 50, 1) 100%);
     color: grey;
-    padding: 1%;
+    padding: 8px;
     position: fixed;
     justify-content: space-between;
     bottom: 0;

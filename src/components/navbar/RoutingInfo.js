@@ -15,9 +15,11 @@ const RoutingInfo = () => {
     return (
         <div>
             <Router>
-                <div className="align-items-center viewport-height">
+                <div className="head">
                     <NewNavBar/>
-                    <Routes className='body'>
+                </div>
+                <div className="body align-items-center viewport-height">
+                    <Routes>
                         <Route path='/' exact element={<HomePage/>}/>
                         <Route path='/about' element={<AboutMe/>}/>
                         <Route path='/blogs' element={<Blog/>}/>
@@ -26,7 +28,7 @@ const RoutingInfo = () => {
                         <Route path='/login4me' element={<MyLogin/>}/>
                     </Routes>
                 </div>
-                <div>
+                <div className="foot">
                     <Footer/>
                 </div>
             </Router>
