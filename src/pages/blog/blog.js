@@ -1,19 +1,24 @@
 import React from 'react';
 import {BlogsFound} from "./blogFetcher/blogFetch";
 import './blogStyling.css';
+import {Card} from "react-bootstrap";
 
 const Blog = () => {
     return (
         <div className="blog-page">
             {BlogsFound.map(blogs => (
-                <section className="blog-elements">
-                    <h3 className="blog-title">
-                        {blogs.title}
-                    </h3>
-                    <p className="blog-content">
-                        {blogs.textBlurb}
-                    </p>
-                </section>
+                <Card className="blog-elements" key={blogs.id}>
+                    <Card.Title className="blog-title">
+                        <div>
+                            {blogs.title}
+                        </div>
+                    </Card.Title>
+                    <Card.Body className="blog-content">
+                        <div>
+                            {blogs.textBlurb}
+                        </div>
+                    </Card.Body>
+                </Card>
             ))}
         </div>
     );

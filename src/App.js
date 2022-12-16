@@ -1,6 +1,6 @@
 import React from "react";
 import './App.css';
-import RoutingInfo from "./components/navbar/RoutingInfo";
+import RoutingInfo from "./components/navbar/routing/RoutingInfo";
 
 
 const App = () => {

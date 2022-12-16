@@ -3,6 +3,13 @@
     max-height: 60px;
 }
 
+.nav-wording {
+    font-family: sans-serif;
+    font-size: 1vmax;
+    color: white;
+    text-shadow: 1px 1px 1px black;
+}
+
 .navBarMain {
     background: linear-gradient(0deg, rgba(34, 193, 195, 1) 0%,
     rgba(150, 190, 116, 1) 50%, rgba(253, 45, 50, 1) 100%);
@@ -13,6 +20,9 @@
 
 .body {
     height: 100%;
+    padding-top: 10px;
+    display: grid;
+    place-items: center;
 }
 
 .foot {

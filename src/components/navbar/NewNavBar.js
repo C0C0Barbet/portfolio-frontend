@@ -13,7 +13,7 @@ const NewNavBar = () => {
             <Container>
                 <Navbar.Brand onClick={() => setExpanded(false)} as={Link} to="/">
                     <Container>
-                        <Image className="d-inline-block navBarImage" fluid roundedCircle src={Me}
+                        <Image className="d-inline-block navBarImage nav-wording" fluid roundedCircle src={Me}
                                alt="Yep, that's me!"/>{' '}
                         Colin Burgess
                     </Container>
@@ -23,16 +23,16 @@ const NewNavBar = () => {
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="me-auto align-bottom">
                         <Nav.Link onClick={() => setExpanded(false)} as={Link} to="/about">
-                            <h5>About Me</h5>
+                            <div className="nav-wording">About Me</div>
                         </Nav.Link>
                         <Nav.Link onClick={() => setExpanded(false)} as={Link} to="/blogs">
-                            <h5>Blog</h5>
+                            <div className="nav-wording">Blog</div>
                         </Nav.Link>
                         <Nav.Link onClick={() => setExpanded(false)} as={Link} to="/projects">
-                            <h5>Projects</h5>
+                            <div className="nav-wording">Projects</div>
                         </Nav.Link>
                         <Nav.Link onClick={() => setExpanded(false)} as={Link} to="/contact">
-                            <h5>Contact Me</h5>
+                            <div className="nav-wording">Contact Me</div>
                         </Nav.Link>
                     </Nav>
                 </Navbar.Collapse>
