@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {Container, Image, Nav, Navbar} from "react-bootstrap";
+import {Container, Nav, Navbar} from "react-bootstrap";
 import Me from "../../filesToUse/images/me.jpg";
 import "./NewNavBarStyling.css";
 import {Link} from "react-router-dom";
@@ -13,8 +13,8 @@ const NewNavBar = () => {
             <Container>
                 <Navbar.Brand onClick={() => setExpanded(false)} as={Link} to="/">
                     <Container>
-                        <Image className="d-inline-block navBarImage nav-wording" fluid roundedCircle src={Me}
-                               alt="Yep, that's me!"/>{' '}
+                        <img className="navBarImage nav-wording" src={Me}
+                             alt="Yep, that's me!"/>{' '}
                         Colin Burgess
                     </Container>
                 </Navbar.Brand>
