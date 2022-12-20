@@ -6,6 +6,7 @@
     grid-template-rows: auto auto;
     grid-gap: 20px;
     justify-content: Center;
+    width: 100%;
 }
 
 .about-title {
@@ -14,7 +15,16 @@
     text-align: center;
 }
 
+.my-image {
+    border: 1dvmax solid;
+    border-radius: 75%;
+    width: auto;
+    max-height: 20dvmax;
+}
+
 .about-body {
+    display: flex;
+
     grid-column: 3;
     grid-row: 2;
     text-align: center;

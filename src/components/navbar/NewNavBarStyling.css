@@ -1,15 +1,9 @@
-.navBarImage {
-    border: 6px solid;
-    border-radius: 50%;
-    width: auto;
-    max-height: 60px;
-}
-
 .nav-wording {
     font-family: sans-serif;
     font-size: 3dvmin;
     color: white;
     text-shadow: 1px 1px 1px black;
+    padding-left: 5%;
 }
 
 .navBarMain {
@@ -23,7 +17,7 @@
     display: flex;
     height: calc(100vh - 70px);
     background: #9ED2C6;
-    padding-top: 10px;
+    padding: 2dvmax;
 }
 
 .foot {

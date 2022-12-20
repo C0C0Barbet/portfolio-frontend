@@ -1,4 +1,16 @@
 .contact {
-    margin-top: 10%;
-    margin-bottom: 10%;
+    display: flex;
+    justify-content: center;
+    place-items: center;
+    width: 100%;
+    background: transparent;
+}
+
+.form-contact {
+    background: #9ED2C6;
+}
+
+.form-header {
+    display: flex;
+    justify-content: center;
 }
