@@ -15,10 +15,10 @@ const NewNavBar = () => {
                         Colin Burgess
                     </Container>
                 </Navbar.Brand>
-                <Navbar.Toggle aria-controls="responsive-navbar-nav"
-                               onClick={() => setExpanded(expanded ? false : "expanded")}/>
-                <Navbar.Collapse id="responsive-navbar-nav">
-                    <Nav className="me-auto align-bottom">
+                <Navbar.Toggle
+                    onClick={() => setExpanded(expanded ? false : "expanded")}/>
+                <Navbar.Collapse>
+                    <Nav>
                         <Nav.Link onClick={() => setExpanded(false)} as={Link} to="/">
                             <div className="nav-wording">About Me</div>
                         </Nav.Link>

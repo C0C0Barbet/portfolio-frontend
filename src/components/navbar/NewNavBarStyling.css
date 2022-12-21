@@ -1,24 +1,41 @@
 .nav-wording {
     font-family: sans-serif;
-    font-size: 3dvmin;
+    font-size: 1dvmax;
     color: white;
     text-shadow: 1px 1px 1px black;
-    padding-left: 5%;
 }
 
 .navBarMain {
     background: #54BAB9;
 }
 
-.head {
-}
-
 .body {
     display: flex;
-    height: calc(100vh - 70px);
+    justify-content: center;
     background: #9ED2C6;
-    padding: 2dvmax;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
 }
 
-.foot {
+@media only screen and (max-width: 1080px) {
+    nav-wording {
+        font-family: sans-serif;
+        font-size: 4dvmax;
+        color: white;
+        text-shadow: 1px 1px 1px red;
+    }
+
+    .navBarMain {
+        background: darkslateblue;
+    }
+
+    .body {
+        display: flex;
+        justify-content: center;
+        background: mediumpurple;
+        margin: 0;
+        padding: 0;
+        min-height: 100vh;
+    }
 }

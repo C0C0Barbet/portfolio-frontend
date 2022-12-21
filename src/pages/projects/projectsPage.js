@@ -16,6 +16,9 @@ const ProjectsPage = () => {
                 <div className='game-card'>
                     <img src={prison} alt='Prison Escape Freedom Awaits'></img>
                 </div>
+                <div className='game-card'>
+                    <img src={prison} alt='Prison Escape Freedom Awaits'></img>
+                </div>
             </div>
         </div>
     );

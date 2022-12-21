@@ -22,8 +22,8 @@ const RoutingInfo = () => {
                     <Route path='/contact' element={<ContactMe/>}/>
                     <Route path='/login4me' element={<MyLogin/>}/>
                 </Routes>
+                <Footer/>
             </section>
-            <Footer/>
         </Router>
     );
 }

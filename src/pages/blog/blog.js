@@ -5,7 +5,7 @@ import {Card} from "react-bootstrap";
 
 const Blog = () => {
     return (
-        <div className="blog-page">
+        <div>
             {BlogsFound.map(blogs => (
                 <Card className="blog-elements" key={blogs.id}>
                     <Card.Title className="blog-title">

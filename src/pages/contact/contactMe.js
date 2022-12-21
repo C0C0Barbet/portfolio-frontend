@@ -11,19 +11,20 @@ const ContactMe = () => {
                         <h2 className="form-header">Enter Stuff</h2>
                     </div>
                 </Row>
-                <Row>
-                    <Card.Body className="col-1">Type
-                        Something</Card.Body>
-                    <input type="text" className="form-control col-6" id="userInput"
+                <Row className="col-8">
+                    <div className="form-label">Type
+                        Something
+                    </div>
+                    <input type="text" className="form-control" id="userInput"
                            aria-describedby="youKnowWhatToEnter"/>
                 </Row>
-                <Row className="col-6">
-                    <Card.Body>x2</Card.Body>
+                <Row className="col-8">
+                    <div className="form-label">x2</div>
                     <input type="text" className="form-control"
                            id="moreUserInput"/>
                 </Row>
                 <Row>
-                    <Button variant="outline-info">What?</Button>
+                    <Button variant="info">What?</Button>
                 </Row>
             </Card>
         </form>

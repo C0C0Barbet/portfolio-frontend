@@ -1,16 +1,44 @@
 .contact {
-    display: flex;
-    justify-content: center;
+    display: grid;
     place-items: center;
     width: 100%;
     background: transparent;
 }
 
+.form-header {
+    display: grid;
+    place-items: center;
+}
+
 .form-contact {
+    display: grid;
+    place-items: center;
     background: #9ED2C6;
 }
 
-.form-header {
-    display: flex;
-    justify-content: center;
+.form-label {
+    text-align: center;
+}
+
+@media only screen and (max-width: 1080px) {
+    .contact {
+        display: flex;
+        justify-content: center;
+        place-items: center;
+        width: 75%;
+        background: transparent;
+    }
+
+    .form-header {
+        display: flex;
+        justify-content: center;
+    }
+
+    .form-contact {
+        background: #9ED2C6;
+    }
+
+    .form-label {
+        text-align: center;
+    }
 }
