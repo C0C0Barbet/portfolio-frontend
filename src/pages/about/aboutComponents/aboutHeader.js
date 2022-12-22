@@ -4,9 +4,9 @@ import Me from "../../../filesToUse/images/me.jpg";
 const AboutHeader = () => {
     return (
         <div>
-            <div className="about-header-elements">
-                My Name is Colin Burgess
-            </div>
+            <h1 className="about-header-elements">
+                I'm Colin Burgess
+            </h1>
 
             <div className="about-header-elements">
                 <img className="my-image" src={Me} alt="Yep, that's me!"/>

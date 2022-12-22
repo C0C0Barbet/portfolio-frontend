@@ -1,34 +1,34 @@
 import React from 'react';
 import './contactStyling.css';
-import {Button, Card, Row} from "react-bootstrap";
 
 const ContactMe = () => {
     return (
-        <form className="contact">
-            <Card className="form-contact">
-                <Row>
-                    <div>
-                        <h2 className="form-header">Enter Stuff</h2>
-                    </div>
-                </Row>
-                <Row className="col-8">
-                    <div className="form-label">Type
-                        Something
-                    </div>
-                    <input type="text" className="form-control" id="userInput"
-                           aria-describedby="youKnowWhatToEnter"/>
-                </Row>
-                <Row className="col-8">
-                    <div className="form-label">x2</div>
-                    <input type="text" className="form-control"
-                           id="moreUserInput"/>
-                </Row>
-                <Row>
-                    <Button variant="info">What?</Button>
-                </Row>
-            </Card>
+        <form className="contact-body">
+            <div className="container form-contact">
+                <div className="row form-header">
+                    <h2>
+                        Contact Me
+                    </h2>
+                </div>
+                <div className="row form-element">
+                    <input type="text" className="form-control form-input" id="formGroupExampleInput"
+                           placeholder="Your Name..."/>
+                </div>
+                <div className="row form-element">
+                    <input type="text" className="form-control form-input" id="formGroupExampleInput"
+                           placeholder="Your Email..."/>
+                </div>
+                <div className="row form-element">
+                    <textarea className="form-control form-input" rows="4" cols="50"
+                              id="formGroupExampleInput"
+                              placeholder="Anything Else..."/>
+                </div>
+                <div className="row button-styling">
+                    <button type="button" className="form-button btn btn-secondary btn-lg btn-block">Send</button>
+                </div>
+            </div>
         </form>
-    );
+    )
 };
 
 export default ContactMe;

@@ -1,11 +1,25 @@
 .projects-body {
+    animation: fadeIn 2.5s;
     text-align: center;
-    width: 60%;
+    width: 70%;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.projects-header {
+    padding-top: 20px;
 }
 
 .cards-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     place-items: center;
     justify-content: center;
     gap: 20px;
@@ -13,7 +27,7 @@
 }
 
 .game-card {
-    min-width: 275px;
+    min-width: 400px;
     padding: 5px;
     cursor: pointer;
     transform-origin: center bottom;
@@ -33,11 +47,35 @@
 
 .game-card:hover {
     opacity: 1 !important;
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
 .game-card:hover ~ .game-card {
     transform: translate3d(0, 0, 20px);
+}
+
+@media only screen and (max-width: 768px) {
+    .projects-body {
+        text-align: center;
+        width: 70%;
+    }
+
+    .cards-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
+        place-items: center;
+        justify-content: center;
+        gap: 15px;
+        padding-top: 30px;
+    }
+
+    .game-card {
+        min-width: 250px;
+        padding: 5px;
+        cursor: pointer;
+        transform-origin: center bottom;
+        transition: 250ms all;
+    }
 }
 
 

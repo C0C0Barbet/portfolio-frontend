@@ -5,19 +5,15 @@ import {Card} from "react-bootstrap";
 
 const Blog = () => {
     return (
-        <div>
+        <div className="blog-page">
             {BlogsFound.map(blogs => (
                 <Card className="blog-elements" key={blogs.id}>
-                    <Card.Title className="blog-title">
-                        <div>
-                            {blogs.title}
-                        </div>
-                    </Card.Title>
-                    <Card.Body className="blog-content">
-                        <div>
-                            {blogs.textBlurb}
-                        </div>
-                    </Card.Body>
+                    <Card className="blog-title">
+                        {blogs.title}
+                    </Card>
+                    <div className="blog-content">
+                        {blogs.textBlurb}
+                    </div>
                 </Card>
             ))}
         </div>
