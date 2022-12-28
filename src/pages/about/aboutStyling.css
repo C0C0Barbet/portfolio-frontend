@@ -1,5 +1,31 @@
+.initial-about-container {
+    position: relative;
+    padding-top: 15px;
+    display: grid;
+    grid-template-columns: 10% 80% 10%;
+    grid-template-rows: min-content;
+    grid-gap: 20px;
+    justify-content: center;
+    place-items: center;
+    transform: translateY(100%);
+    opacity: 0;
+
+    /* Animate the component as it comes into view */
+    animation: initial-fade-and-roll-in 0.5s ease-in-out forwards;
+}
+
+@keyframes initial-fade-and-roll-in {
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
 .about-container {
-    animation: fadeIn 2.5s;
     position: relative;
     padding-top: 15px;
     display: grid;
@@ -10,11 +36,55 @@
     place-items: center;
 }
 
-@keyframes fadeIn {
-    0% {
+.about-container-out {
+    position: relative;
+    padding-top: 15px;
+    display: grid;
+    grid-template-columns: 10% 80% 10%;
+    grid-template-rows: min-content;
+    grid-gap: 20px;
+    justify-content: center;
+    place-items: center;
+    transform: translateX(0%);
+
+    /* Animate the component as it comes into view */
+    animation: fade-and-roll-in 0.5s ease-in-out forwards;
+}
+
+@keyframes fade-and-roll-out {
+    from {
+        transform: translateX(-0%);
         opacity: 0;
     }
-    100% {
+    to {
+        transform: translateX(-100%);
+        opacity: 1;
+    }
+}
+
+.subsequent-about-container {
+    position: relative;
+    padding-top: 15px;
+    display: grid;
+    grid-template-columns: 10% 80% 10%;
+    grid-template-rows: min-content;
+    grid-gap: 20px;
+    justify-content: center;
+    place-items: center;
+    transform: translateX(-100%);
+    opacity: 0;
+
+    /* Animate the component as it comes into view */
+    animation: subsequent-fade-and-roll-in 0.5s ease-in-out forwards;
+}
+
+@keyframes subsequent-fade-and-roll-in {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
         opacity: 1;
     }
 }

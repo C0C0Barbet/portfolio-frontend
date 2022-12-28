@@ -1,12 +1,19 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import './App.css';
 import RoutingInfo from "./components/navbar/routing/RoutingInfo";
 
 
 const App = () => {
+    const [isInitialRender, setIsInitialRender] = useState(true);
+
+    useEffect(() => {
+        setIsInitialRender(false);
+    }, []);
 
     return (
-        <RoutingInfo/>
+        <div>
+            <RoutingInfo isInitialRender={isInitialRender}/>
+        </div>
     );
 }
 

@@ -5,11 +5,11 @@ const AboutBody = () => {
         <div>
             <div>
                 <p>
-                    Experienced in various languages, focused largely on Java, C#, and C/C++.
-                    Accomplished at building connections in team settings for improved
-                    information flow and production. Excellent communication skills combined
-                    with an analytical and attentive nature. Looking forward to problem solving
-                    plus developing scalable applications and software.
+                    As a skilled software developer, I have a strong foundation in various programming languages,
+                    including Java, C#, and C/C++. In team settings, I excel at building connections and facilitating
+                    improved information flow and production through my excellent communication skills and analytical
+                    mindset. I am eager to continue problem-solving and developing scalable applications and software in
+                    my career.
                 </p>
             </div>
             <div>

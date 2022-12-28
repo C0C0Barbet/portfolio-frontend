@@ -1,7 +1,9 @@
 import React from 'react';
 import './contactStyling.css';
 
-const ContactMe = () => {
+const ContactMe = (props) => {
+    console.log("prevComponent: " + props.prevComponent);
+
     return (
         <form className="contact-body">
             <div className="container form-contact">

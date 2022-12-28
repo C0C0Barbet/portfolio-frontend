@@ -3,7 +3,7 @@ import {Container, Nav, Navbar} from "react-bootstrap";
 import "./NewNavBarStyling.css";
 import {Link} from "react-router-dom";
 
-const NewNavBar = () => {
+const NewNavBar = ({location, prevPath}) => {
 
     const [expanded, setExpanded] = useState(false);
 

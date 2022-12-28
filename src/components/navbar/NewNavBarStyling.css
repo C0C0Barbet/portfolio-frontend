@@ -1,3 +1,12 @@
+.body {
+    display: flex;
+    justify-content: center;
+    background: #9ED2C6;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+
 .navBarMain {
     background: rosybrown;
 }
@@ -15,15 +24,6 @@
     font-size: 18px;
     color: white;
     text-shadow: 1px 1px 1px black;
-}
-
-.body {
-    display: flex;
-    justify-content: center;
-    background: #9ED2C6;
-    margin: 0;
-    padding: 0;
-    min-height: 100vh;
 }
 
 @media only screen and (max-width: 1200px) {

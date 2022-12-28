@@ -1,17 +1,34 @@
 .contact-body {
-    animation: fadeIn 2.5s;
     display: grid;
     place-items: center;
     width: 100%;
     background: transparent;
+    transform: translateX(100%);
+    opacity: 0;
+
+    /* Animate the component as it comes into view */
+    animation: right-fade-and-roll-in 0.5s ease-in-out forwards;
 }
 
-@keyframes fadeIn {
-    0% {
+@keyframes right-fade-and-roll-in {
+    from {
+        transform: translateX(100%);
         opacity: 0;
     }
-    100% {
+    to {
+        transform: translateX(0);
         opacity: 1;
+    }
+}
+
+@keyframes left-fade-and-roll-out {
+    from {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateX(100%);
+        opacity: 0;
     }
 }
 

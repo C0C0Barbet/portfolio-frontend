@@ -3,7 +3,8 @@ import './projectsStyling.css';
 import {ProjectGrabber} from "./components/projectGrabber";
 
 
-const ProjectsPage = () => {
+const ProjectsPage = (props) => {
+    console.log("prevComponent: " + props.prevComponent);
 
     return (
         <div className="projects-body">

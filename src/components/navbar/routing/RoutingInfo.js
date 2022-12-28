@@ -1,27 +1,48 @@
-import React from "react";
+import React, {useState} from "react";
 import {BrowserRouter as Router, Route, Routes} from "react-router-dom";
 import AboutMe from "../../../pages/about/aboutMe";
 import ProjectsPage from "../../../pages/projects/projectsPage";
 import ContactMe from "../../../pages/contact/contactMe";
 import Footer from "../../footer/footer";
-import NewNavBar from "../NewNavBar";
 import "../NewNavBarStyling.css";
+import TestNavBar from "../testNavBar";
 
-const RoutingInfo = () => {
+const RoutingInfo = ({prop}) => {
+    const [childVariable, setChildVariable] = useState(null);
+    const [originalVariable, setOriginalVariable] = useState(null);
+
+    function handleChildVariable(newValue) {
+        console.log("childVariable: " + childVariable);
+        console.log("newValue: " + newValue);
+        setOriginalVariable(childVariable);
+        setChildVariable(newValue);
+    }
 
     return (
         <Router>
-            <NewNavBar/>
+            <TestNavBar handleChildVariable={handleChildVariable}/>
             <section className="body">
                 <Routes>
-                    <Route path='/' element={<AboutMe/>}/>
-                    <Route path='/projects' element={<ProjectsPage/>}/>
-                    <Route path='/contact' element={<ContactMe/>}/>
+                    <Route
+                        path="/"
+                        element={<AboutMe prevComponent={childVariable} originalVariable={originalVariable}/>}
+                        state={{component: "about"}}
+                    />
+                    <Route
+                        path="/projects"
+                        element={<ProjectsPage prevComponent={childVariable} originalVariable={originalVariable}/>}
+                        state={{component: "projects"}}
+                    />
+                    <Route
+                        path="/contact"
+                        element={<ContactMe prevComponent={childVariable} originalVariable={originalVariable}/>}
+                        state={{component: "contact"}}
+                    />
                 </Routes>
             </section>
             <Footer/>
         </Router>
     );
-}
+};
 
 export default RoutingInfo;
