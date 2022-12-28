@@ -8,9 +8,9 @@
     -webkit-backdrop-filter: blur(21px);
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.36);
     border: 1px solid rgba(0, 0, 0, 0.16);
-    border-radius: 28px;
+    border-radius: clamp(24px, 1.5vw, 28px);
     z-index: 1;
-    margin: 10px;
+    margin: clamp(6px, 0.5vw, 10px);
     padding-top: 12px;
     padding-bottom: 12px;
     position: fixed;
@@ -20,30 +20,7 @@
 }
 
 .image-icon {
-    max-height: 3dvmax;
-    padding-top: 2px;
-    padding-bottom: 2px;
-}
-
-@media only screen and (max-width: 1024px) {
-    .footer-container {
-        background: linear-gradient(
-                135deg,
-                rgba(255, 255, 255, 0.1),
-                rgba(255, 255, 255, 0.1)
-        );
-        backdrop-filter: blur(21px);
-        -webkit-backdrop-filter: blur(21px);
-        box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.36);
-        border: 1px solid rgba(0, 0, 0, 0.16);
-        border-radius: 24px;
-        z-index: 1;
-        margin: 6px;
-        padding-top: 12px;
-        padding-bottom: 12px;
-        position: fixed;
-        height: fit-content;
-        bottom: 0;
-        left: 0;
-    }
+    max-height: clamp(28px, 3vw, 72px);
+    padding-top: clamp(2px, 0.15vw, 3px);
+    padding-bottom: clamp(2px, 0.15vw, 3px);
 }

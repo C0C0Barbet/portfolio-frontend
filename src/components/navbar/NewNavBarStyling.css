@@ -5,10 +5,69 @@
     margin: 0;
     padding: 0;
     min-height: 100vh;
+    overflow-y: auto;
 }
 
 .navBarMain {
-    background: rosybrown;
+    background: mintcream;
+    display: flex;
+    align-items: center;
+    padding: 5px 20px;
+    width: 100%;
+    box-sizing: border-box;
+    height: clamp(60px, 5vh, 100px);
+    z-index: 999;
+}
+
+.navbar-brand {
+    transition: none;
+    font-size: 2rem;
+    color: #333;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.nav-link {
+    font-size: 1.2rem;
+    color: #333;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: all 0.3s;
+}
+
+.nav-link:hover {
+    background: #333;
+    color: #9ED2C6;
+    padding: 0 25px;
+    border-radius: 10px;
+}
+
+@media only screen and (max-width: 767px) {
+    .nav-link {
+        font-size: 1.2rem;
+        text-transform: uppercase;
+        font-weight: 600;
+        transition: none;
+        background: #9ED2C6;
+    }
+}
+
+.nav-link-collapsed {
+    display: none;
+}
+
+.nav-link-not-collapsed {
+    display: block;
 }
 
 .nav-header {
@@ -19,77 +78,24 @@
 }
 
 .nav-wording {
-    padding-left: 15px;
+    padding: 8px 13px;
     font-family: sans-serif;
     font-size: 18px;
     color: white;
     text-shadow: 1px 1px 1px black;
+    background: #9ED2C6;
+    border-radius: 5px;
 }
 
-@media only screen and (max-width: 1200px) {
-    .nav-header {
-        font-family: sans-serif;
-        font-size: 30px;
-        color: white;
-        text-shadow: 1px 1px 1px black;
-    }
+.nav-wording:hover {
+    background: #8CC1B9
 
-    .nav-wording {
-        padding-left: 15px;
-        font-family: sans-serif;
-        font-size: 16px;
-        color: white;
-        text-shadow: 1px 1px 1px black;
-    }
 }
 
-@media only screen and (max-width: 1024px) {
-    .nav-header {
-        font-family: sans-serif;
-        font-size: 28px;
-        color: white;
-        text-shadow: 1px 1px 1px black;
-    }
-
-    .nav-wording {
-        padding-left: 15px;
-        font-family: sans-serif;
-        font-size: 14px;
-        color: white;
-        text-shadow: 1px 1px 1px black;
-    }
+.nav-header {
+    font-size: clamp(24px, 5vw, 32px);
 }
 
-@media only screen and (max-width: 768px) {
-    .nav-header {
-        font-family: sans-serif;
-        font-size: 26px;
-        color: white;
-        text-shadow: 1px 1px 1px black;
-    }
-
-    .nav-wording {
-        padding-left: 15px;
-        font-family: sans-serif;
-        font-size: 16px;
-        color: white;
-        text-shadow: 1px 1px 1px black;
-    }
-}
-
-@media only screen and (max-width: 480px) {
-    .nav-header {
-        font-family: sans-serif;
-        font-size: 24px;
-        color: white;
-        text-shadow: 1px 1px 1px black;
-    }
-
-    .nav-wording {
-        padding-left: 15px;
-        font-family: sans-serif;
-        font-size: 16px;
-        color: white;
-        text-shadow: 1px 1px 1px black;
-    }
+.nav-wording {
+    font-size: clamp(16px, 3vw, 18px);
 }

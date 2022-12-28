@@ -7,7 +7,7 @@ import Footer from "../../footer/footer";
 import "../NewNavBarStyling.css";
 import TestNavBar from "../testNavBar";
 
-const RoutingInfo = ({prop}) => {
+const RoutingInfo = () => {
     const [childVariable, setChildVariable] = useState(null);
     const [originalVariable, setOriginalVariable] = useState(null);
 
@@ -20,7 +20,9 @@ const RoutingInfo = ({prop}) => {
 
     return (
         <Router>
-            <TestNavBar handleChildVariable={handleChildVariable}/>
+            <section className="nav-header">
+                <TestNavBar handleChildVariable={handleChildVariable}/>
+            </section>
             <section className="body">
                 <Routes>
                     <Route
