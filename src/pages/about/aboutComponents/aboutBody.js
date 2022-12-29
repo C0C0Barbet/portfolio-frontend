@@ -12,11 +12,6 @@ const AboutBody = () => {
                     my career.
                 </p>
             </div>
-            <div>
-                <p>
-                    Here's a small change to test!
-                </p>
-            </div>
         </div>
     );
 };

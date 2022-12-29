@@ -104,49 +104,15 @@
 .my-image {
     border: 0.5dvw solid;
     border-radius: 75%;
-    max-height: 20dvw;
+    max-height: clamp(100px, 20vw, 400px);
 }
 
 /* =========================================================================== */
 
 .about-body {
     height: 100%;
-    width: 80dvw;
+    max-width: clamp(20dvw, 80vw, 100dvw);
     grid-column: 2;
     grid-row: 2;
     text-align: center;
-}
-
-@media only screen and (max-width: 768px) {
-    .about-header-elements {
-        padding: 16px;
-    }
-
-    .my-image {
-        border: 1dvw solid;
-        border-radius: 75%;
-        max-height: 40dvw;
-    }
-
-    .about-body {
-        height: 100%;
-        width: 75dvw;
-        grid-column: 2;
-        grid-row: 2;
-        text-align: center;
-    }
-}
-
-@media only screen and (max-width: 480px) {
-    .about-header-elements {
-        padding: 14px;
-    }
-
-    .about-body {
-        height: 100%;
-        width: 70dvw;
-        grid-column: 2;
-        grid-row: 2;
-        text-align: center;
-    }
 }
