@@ -5,6 +5,7 @@ import ProjectsView from "./subProjects/projectsView";
 
 
 const ProjectsPage = (props) => {
+
     const [openProject, setOpenProject] = useState(null);
 
     const sectionRef = useRef(null);

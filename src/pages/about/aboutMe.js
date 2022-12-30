@@ -33,9 +33,9 @@ const AboutMe = (props) => {
             <h1 className="about-title">
                 <AboutHeader/>
             </h1>
-            <h3 className="about-body">
+            <h6 className="about-body">
                 <AboutBody/>
-            </h3>
+            </h6>
         </div>
     );
 };

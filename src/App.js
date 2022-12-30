@@ -4,6 +4,8 @@ import RoutingInfo from "./components/navbar/routing/RoutingInfo";
 
 
 const App = () => {
+    const [isMobile, setIsMobile] = useState(window.innerWidth <= 576);
+
     const [isInitialRender, setIsInitialRender] = useState(true);
 
     useEffect(() => {

@@ -86,27 +86,42 @@
     transform: translate3d(0, 0, 20px);
 }
 
-
-.expanded-project-view {
-    height: fit-content;
-}
-
 /* =========================================================================== */
 
+.expanded-project-view {
+    height: max-content;
+}
+
 .interior-project-page-view {
+    max-height: max-content;
     background: peachpuff;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: auto auto auto auto auto;
+    padding: 10px;
+}
+
+@media only screen and (max-width: 460px) {
+
+    .interior-project-page-view {
+        max-height: clamp(100px, 20vw, 700px);
+        background: peachpuff;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: auto auto auto auto auto;
+    }
+
 }
 
 .project-view-header {
+    background: pink;
     grid-row: 1;
-    grid-column-start: 2;
+    grid-column-start: 1;
     grid-column-end: 4;
 }
 
 .project-view-header-exit {
+    background: pink;
     padding: 5px;
     grid-row: 1;
     grid-column-start: 4;
@@ -118,6 +133,7 @@
     color: black;
     font-size: larger;
     border: transparent;
+    padding-left: 75%;
 }
 
 .exit-button:hover {
@@ -126,8 +142,10 @@
 }
 
 .project-view-images {
-    max-height: clamp(600px, 20vw, 1280px);
-    display: flex;
+    max-height: clamp(600px, 20vw, 1000px);
+    display: grid;
+    grid-template-columns:  20% 80%;
+    grid-template-rows:  75% 25%;
     grid-row-start: 2;
     grid-row-end: 4;
     grid-column-start: 1;
@@ -136,10 +154,23 @@
 
 .project-image {
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    max-width: 400px;
-    max-height: 300px;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    max-width: fit-content;
+    max-height: fit-content;
     overflow-x: hidden;
+}
+
+.project-selected-image {
+    place-self: center;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    max-width: 800px;
+    max-height: 600px;
+    overflow-x: hidden;
+    padding: 25px;
 }
 
 .project-view-description {
@@ -149,7 +180,14 @@
     grid-column-end: 4;
 }
 
+.project-view-description-text {
+    padding: 5px;
+    font-size: clamp(1.2ch, 2vw, 2ch);
+}
+
 .project-view-itch {
+    display: flex;
+    justify-content: center;
     grid-row-start: 5;
     grid-row-end: 5;
     grid-column-start: 1;
