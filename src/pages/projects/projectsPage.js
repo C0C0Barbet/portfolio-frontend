@@ -56,7 +56,7 @@ const ProjectsPage = (props) => {
                                 className="expanded-project-view"
                                 ref={sectionRef}
                             >
-                                <ProjectsView selectedProject={project.title}/>
+                                <ProjectsView selectedProject={project.title} handleOpenProject={handleOpenProject}/>
                             </section>
                         ) : null}
                     </div>
