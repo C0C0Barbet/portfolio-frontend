@@ -4,7 +4,7 @@
     background: mintcream;
     margin: 0;
     padding: 0;
-    min-height: 100vh;
+    min-height: 92vh;
     overflow-y: auto;
 }
 
@@ -15,7 +15,7 @@
     padding: clamp(5px, 1vh, 20px);
     width: 100%;
     box-sizing: border-box;
-    height: clamp(60px, 5vh, 100px);
+    height: 7vh;
     z-index: 999;
 }
 

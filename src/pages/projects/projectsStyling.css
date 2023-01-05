@@ -154,7 +154,7 @@
 }
 
 .project-view-images {
-    padding: 20px 20px 0px 10px;
+    padding: 20px 20px 0 10px;
     max-height: clamp(600px, 20vw, 1000px);
     display: grid;
     gap: 10px;
