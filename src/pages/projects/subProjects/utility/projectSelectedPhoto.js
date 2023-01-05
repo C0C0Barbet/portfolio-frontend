@@ -6,8 +6,8 @@ const ProjectSelectedPhoto = (props) => {
     const chosenImage = props.image;
 
     return (
-        <div>
-            <img className="project-selected-image" key={chosenImage.id} src={chosenImage.image} alt='game'/>
+        <div className="project-selected-image-holder">
+            <img className="project-selected-image-itself" key={chosenImage.id} src={chosenImage.image} alt='game'/>
         </div>
     );
 };

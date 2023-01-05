@@ -88,6 +88,7 @@
     display: grid;
     max-height: calc(70% - 30%); /* set the max-height to be 80% of the screen's height, minus 20% for the GameCards */
     top: 10%; /* set the top position to be 10% of the screen's height */
+    padding-top: 10px;
 
 }
 
@@ -100,7 +101,7 @@
 }
 
 .interior-project-page-view {
-    border: 5px solid slategrey;
+    border: 2px solid black;
     max-height: max-content;
     background: slategrey;
     display: grid;
@@ -154,12 +155,11 @@
 }
 
 .project-view-images {
-    padding: 20px 20px 0 10px;
+    padding: 20px 20px 20px 10px;
     max-height: clamp(600px, 20vw, 1000px);
     display: grid;
     gap: 10px;
     grid-template-columns:  20% 80%;
-    grid-template-rows:  75% 25%;
     grid-row-start: 2;
     grid-row-end: 4;
     grid-column-start: 1;
@@ -171,27 +171,30 @@
     width: 100%; /* make the images fill the width of their container */
     height: auto; /* make the height of the images adjust based on their aspect ratio */
     cursor: pointer;
-    transform-origin: center bottom;
-    transition: 250ms all;
+    transition: 0.5s;
+    overflow-y: scroll;
 }
 
-.project-image:hover {
-    opacity: 1 !important;
-    transform: scale(1.02);
+.project-image:hover > :not(:hover) {
+    opacity: .4;
 }
 
-.project-selected-image {
-    border: 5px solid grey;
+.project-selected-image-holder {
     border-radius: 10px;
-    place-self: center;
-    grid-row-start: 1;
-    grid-row-end: 2;
-    width: 100%;
-    height: auto;
-    overflow-x: hidden;
+    display: grid;
+    place-content: center;
+}
+
+.project-selected-image-itself {
+    border: 5px solid grey;
+    border-radius: 5px;
+    max-width: 100%;
+    height: 100%;
+
 }
 
 .project-view-description {
+    padding: 5px;
     border: 2px solid grey;
     height: 100%;
     grid-row-start: 2;
