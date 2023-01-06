@@ -52,6 +52,25 @@
     border-radius: 10px;
 }
 
+.nav-header {
+    font-family: sans-serif;
+    font-size: 32px;
+    background: #9ED2C6;
+    text-shadow: 1px 1px 1px black;
+    min-height: 8dvh;
+}
+
+@media (min-aspect-ratio: 9/21) and (max-aspect-ratio: 9/19) {
+
+    .nav-header {
+        font-family: sans-serif;
+        font-size: 32px;
+        background: red;
+        text-shadow: 1px 1px 1px black;
+        min-height: 10dvh;
+    }
+}
+
 @media only screen and (max-width: 767px) {
 
     .nav-link {
@@ -68,14 +87,6 @@
         padding: 0 5px;
         border-radius: 5px;
     }
-}
-
-.nav-header {
-    font-family: sans-serif;
-    font-size: 32px;
-    background: #9ED2C6;
-    text-shadow: 1px 1px 1px black;
-    padding-bottom: 7px;
 }
 
 .nav-wording {
