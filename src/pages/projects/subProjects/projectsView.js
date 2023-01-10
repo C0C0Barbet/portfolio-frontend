@@ -24,7 +24,9 @@ const ProjectsView = (props) => {
     return (
         <>
             {isMobile ? (
-                <Card>TODO</Card>
+                <Card>
+                    <div className="project-view-itch" dangerouslySetInnerHTML={{__html: project.itchLink}}/>
+                </Card>
             ) : (
                 <Card className="interior-project-page-view" key={project.id}>
                     <Card className="project-view-header">
@@ -48,7 +50,7 @@ const ProjectsView = (props) => {
                         <ProjectSelectedPhoto image={selectedImage}/>
                     </Card>
                     <Card className="project-view-description">
-                        <h4>
+                        <h4 className="project-view-description-header">
                             A little background
                         </h4>
                         <p className="project-view-description-text">

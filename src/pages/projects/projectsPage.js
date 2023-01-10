@@ -52,10 +52,7 @@ const ProjectsPage = (props) => {
                             <img src={project.image} alt={project.title}/>
                         </div>
                         {openProject === project.title ? (
-                            <section
-                                className="expanded-project-view"
-                                ref={sectionRef}
-                            >
+                            <section className="expanded-project-view" ref={sectionRef}>
                                 <ProjectsView selectedProject={project.title} handleOpenProject={handleOpenProject}/>
                             </section>
                         ) : null}

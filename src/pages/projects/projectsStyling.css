@@ -86,29 +86,31 @@
 
 .expanded-project-view {
     display: grid;
-    max-height: calc(70% - 30%); /* set the max-height to be 80% of the screen's height, minus 20% for the GameCards */
-    top: 10%; /* set the top position to be 10% of the screen's height */
+    max-height: calc(60% - 40%); /* set the max-height to be 80% of the screen's height, minus 20% for the GameCards */
+    top: 5%; /* set the top position to be 10% of the screen's height */
     padding-top: 10px;
 
 }
 
-
-@media (max-height: 800px) {
+@media (max-width: 800px) {
     .expanded-project-view {
-        height: 100%;
-        top: 0;
+        display: grid;
+        max-height: calc(60% - 40%); /* set the max-height to be 80% of the screen's height, minus 20% for the GameCards */
+        top: 5%; /* set the top position to be 10% of the screen's height */
+        padding-top: 10px;
+        padding-bottom: 10px;
     }
 }
 
 .interior-project-page-view {
     border: 2px solid black;
-    max-height: max-content;
+    max-height: fit-content;
     background: slategrey;
     display: grid;
     gap: 10px;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: auto auto auto auto auto;
-    padding: 10px;
+    padding: 5px;
 }
 
 @media only screen and (max-width: 460px) {
@@ -124,22 +126,35 @@
 }
 
 .project-view-header {
+    background: linear-gradient(
+            135deg,
+            rgba(255, 255, 255, 0.1),
+            rgba(255, 255, 255, 0.1)
+    );
+    backdrop-filter: blur(21px);
+    -webkit-backdrop-filter: blur(21px);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.36);
+    border: 1px solid rgba(0, 0, 0, 0.16);
+    border-radius: clamp(24px, 1.5vw, 28px);
+    z-index: 1;
+    height: fit-content;
     display: grid;
-    padding: 5px;
-    background: pink;
     grid-row: 1;
     grid-column-start: 1;
     grid-column-end: 5;
 }
 
 .project-view-header-title {
+    height: 100%;
     grid-column-start: 1;
-    grid-column-end: 4;
+    grid-column-end: 5;
 }
 
 .project-view-header-exit {
-    grid-column-start: 4;
-    grid-column-end: 5;
+    height: 100%;
+    display: grid;
+    grid-column-start: 5;
+    grid-column-end: 6;
 }
 
 .exit-button {
@@ -150,8 +165,13 @@
 }
 
 .exit-button:hover {
-    background: transparent;
-    color: grey;
+    color: #ffffff;
+    background-color: transparent;
+}
+
+.exit-button:active:focus {
+    color: #ffffff;
+    background-color: transparent;
 }
 
 .project-view-images {
@@ -203,14 +223,26 @@
     grid-column-end: 4;
 }
 
+.project-view-description-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+    top: 25%;
+}
+
 .project-view-description-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
     margin: 5px;
     font-size: clamp(1ch, 1vw, 2ch);
 }
 
 .project-view-itch {
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     grid-row-start: 5;
     grid-row-end: 5;
     grid-column-start: 1;

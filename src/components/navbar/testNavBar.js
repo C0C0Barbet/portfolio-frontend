@@ -16,7 +16,7 @@ const TestNavBar = ({handleChildVariable}) => {
     }, []);
 
     return (
-        <Navbar expanded={expanded} expand="md" className='navBarMain'>
+        <Navbar expanded={expanded} expand="sm" className='navBarMain'>
             <Navbar.Brand onClick={() => {
                 navigate('/', {state: {component: 'about'}});
                 handleChildVariable('about');
