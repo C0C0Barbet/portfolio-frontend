@@ -51,10 +51,9 @@ const ProjectsViewMobile = (props) => {
                         {project.description}
                     </p>
                 </Card>
-                
+
                 <div className="project-view-itch" dangerouslySetInnerHTML={{__html: project.itchLinkMobile}}/>
             </Card>
-            }
         </>
     );
 };

@@ -20,7 +20,7 @@
 }
 
 .image-icon {
-    max-height: clamp(28px, 3vw, 72px);
+    max-height: clamp(28px, 3vw, 50px);
     padding-top: clamp(2px, 0.15vw, 3px);
     padding-bottom: clamp(2px, 0.15vw, 3px);
 }

@@ -61,8 +61,7 @@ const ProjectsPage = (props) => {
                                 ) : (
                                     <ProjectsViewMobile selectedProject={project.title}
                                                         handleOpenProject={handleOpenProject}/>
-                                )
-                                }
+                                )}
                             </section>
                         ) : null}
                     </div>

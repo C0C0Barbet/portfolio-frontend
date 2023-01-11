@@ -26,7 +26,7 @@ const ContactMe = (props) => {
                               placeholder="Anything Else..."/>
                 </div>
                 <div className="row button-styling">
-                    <button type="button" className="form-button btn btn-secondary btn-lg btn-block">Send</button>
+                    <button type="button" className="form-button btn btn-secondary btn-lg btn-block"></button>
                 </div>
             </div>
         </form>

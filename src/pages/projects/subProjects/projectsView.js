@@ -21,38 +21,37 @@ const ProjectsView = (props) => {
     }
     return (
         <>
-                <Card className="interior-project-page-view" key={project.id}>
-                    <Card className="project-view-header">
-                        <h1 className="project-view-header-title">
+            <Card className="interior-project-page-view" key={project.id}>
+                <Card className="project-view-header">
+                    <h1 className="project-view-header-title">
+                        <b>
+                            {project.title}
+                        </b>
+                    </h1>
+                    <div className="project-view-header-exit">
+                        <Button className="exit-button" title='Exit'
+                                onClick={() => handleOpenProject(project.title)}>
                             <b>
-                                {project.title}
+                                X
                             </b>
-                        </h1>
-                        <div className="project-view-header-exit">
-                            <Button className="exit-button" title='Exit'
-                                    onClick={() => handleOpenProject(project.title)}>
-                                <b>
-                                    X
-                                </b>
-                            </Button>
-                        </div>
-                    </Card>
-
-                    <Card className="project-view-images">
-                        <ProjectPageImages images={images} setSelectedImage={setSelectedImage}/>
-                        <ProjectSelectedPhoto image={selectedImage}/>
-                    </Card>
-                    <Card className="project-view-description">
-                        <h4 className="project-view-description-header">
-                            A little background
-                        </h4>
-                        <p className="project-view-description-text">
-                            {project.description}
-                        </p>
-                    </Card>
-                    <div className="project-view-itch" dangerouslySetInnerHTML={{__html: project.itchLink}}/>
+                        </Button>
+                    </div>
                 </Card>
-            }
+
+                <Card className="project-view-images">
+                    <ProjectPageImages images={images} setSelectedImage={setSelectedImage}/>
+                    <ProjectSelectedPhoto image={selectedImage}/>
+                </Card>
+                <Card className="project-view-description">
+                    <h4 className="project-view-description-header">
+                        A little background
+                    </h4>
+                    <p className="project-view-description-text">
+                        {project.description}
+                    </p>
+                </Card>
+                <div className="project-view-itch" dangerouslySetInnerHTML={{__html: project.itchLink}}/>
+            </Card>
         </>
     );
 };

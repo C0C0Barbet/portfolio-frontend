@@ -12,7 +12,7 @@
     font-family: sans-serif;
     background: #9ED2C6;
     text-shadow: 1px 1px 1px black;
-    min-height: 9vh;
+    height: clamp(8vh, 10vw, 9vh);
 }
 
 .navBarMain {
@@ -22,7 +22,7 @@
     padding: clamp(5px, 1vh, 20px);
     width: 100%;
     box-sizing: border-box;
-    height: 9vh;
+    height: 9.5vh;
     z-index: 1;
 }
 
@@ -52,6 +52,21 @@
     transition: all 0.3s;
 }
 
+.nav-wording {
+    font-family: sans-serif;
+    font-size: clamp(0.8em, 2vw, 1.2em);
+    color: white;
+    text-shadow: 1px 1px 1px black;
+    background: #9ED2C6;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.nav-wording:hover {
+    background: #8CC1B9
+
+}
+
 @media only screen and (max-width: 576px) {
 
     .navBarMain {
@@ -61,7 +76,7 @@
         padding: clamp(5px, 1vh, 20px);
         width: 100%;
         box-sizing: border-box;
-        height: 9vh;
+        height: 10vh;
         z-index: 1;
     }
 
@@ -82,19 +97,4 @@
         background: #9ED2C6;
         border-radius: 5px;
     }
-}
-
-.nav-wording {
-    font-family: sans-serif;
-    font-size: clamp(0.8em, 2vw, 1.2em);
-    color: white;
-    text-shadow: 1px 1px 1px black;
-    background: #9ED2C6;
-    padding: 5px;
-    border-radius: 10px;
-}
-
-.nav-wording:hover {
-    background: #8CC1B9
-
 }

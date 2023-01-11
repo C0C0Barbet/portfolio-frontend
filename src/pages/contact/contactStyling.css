@@ -61,3 +61,11 @@
 .form-button {
     margin: 10px;
 }
+
+.form-button:after {
+    content: "Send!";
+}
+
+.form-button:hover:after {
+    content: "Under Construction...";
+}
