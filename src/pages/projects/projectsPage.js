@@ -2,9 +2,11 @@ import React, {useEffect, useRef, useState} from 'react';
 import './projectsStyling.css';
 import {ProjectGrabber} from "./components/projectGrabber";
 import ProjectsView from "./subProjects/projectsView";
+import ProjectsViewMobile from "./subProjects/projectsViewMobile";
 
 
 const ProjectsPage = (props) => {
+    const [isMobile] = useState(window.innerWidth <= 576);
 
     const [openProject, setOpenProject] = useState(null);
 
@@ -53,7 +55,14 @@ const ProjectsPage = (props) => {
                         </div>
                         {openProject === project.title ? (
                             <section className="expanded-project-view" ref={sectionRef}>
-                                <ProjectsView selectedProject={project.title} handleOpenProject={handleOpenProject}/>
+                                {isMobile ? (
+                                    <ProjectsView selectedProject={project.title}
+                                                  handleOpenProject={handleOpenProject}/>
+                                ) : (
+                                    <ProjectsViewMobile selectedProject={project.title}
+                                                        handleOpenProject={handleOpenProject}/>
+                                )
+                                }
                             </section>
                         ) : null}
                     </div>

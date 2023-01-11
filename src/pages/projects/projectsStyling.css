@@ -89,17 +89,6 @@
     max-height: calc(60% - 40%); /* set the max-height to be 80% of the screen's height, minus 20% for the GameCards */
     top: 5%; /* set the top position to be 10% of the screen's height */
     padding-top: 10px;
-
-}
-
-@media (max-width: 800px) {
-    .expanded-project-view {
-        display: grid;
-        max-height: calc(60% - 40%); /* set the max-height to be 80% of the screen's height, minus 20% for the GameCards */
-        top: 5%; /* set the top position to be 10% of the screen's height */
-        padding-top: 10px;
-        padding-bottom: 10px;
-    }
 }
 
 .interior-project-page-view {
@@ -111,18 +100,6 @@
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: auto auto auto auto auto;
     padding: 5px;
-}
-
-@media only screen and (max-width: 460px) {
-
-    .interior-project-page-view {
-        max-height: clamp(100px, 20vw, 700px);
-        background: grey;
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: auto auto auto auto auto;
-    }
-
 }
 
 .project-view-header {
@@ -247,4 +224,141 @@
     grid-row-end: 5;
     grid-column-start: 1;
     grid-column-end: 5;
+}
+
+/* =========================================================================== */
+
+@media only screen and (max-width: 576px) {
+
+    .expanded-project-view {
+        display: grid;
+        max-height: fit-content; /* set the max-height to be 80% of the screen's height, minus 20% for the GameCards */
+        top: 10%; /* set the top position to be 10% of the screen's height */
+        padding-top: 10px;
+    }
+
+    .interior-project-page-view {
+        max-height: max-content;
+        background: grey;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .project-view-header {
+        background: linear-gradient(
+                135deg,
+                rgba(255, 255, 255, 0.1),
+                rgba(255, 255, 255, 0.1)
+        );
+        backdrop-filter: blur(21px);
+        -webkit-backdrop-filter: blur(21px);
+        box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.36);
+        border: 1px solid rgba(0, 0, 0, 0.16);
+        border-radius: clamp(24px, 1.5vw, 28px);
+        z-index: 1;
+        height: fit-content;
+        display: grid;
+        grid-row: 1;
+        grid-column-start: 1;
+        grid-column-end: 5;
+    }
+
+    .project-view-header-title {
+        height: 100%;
+        grid-column-start: 1;
+        grid-column-end: 5;
+    }
+
+    .project-view-header-exit {
+        height: 100%;
+        grid-column-start: 5;
+        grid-column-end: 6;
+    }
+
+    .exit-button {
+        background: transparent;
+        color: black;
+        font-size: larger;
+        border: transparent;
+    }
+
+    .exit-button:hover {
+        color: #ffffff;
+        background-color: transparent;
+    }
+
+    .exit-button:active:focus {
+        color: #ffffff;
+        background-color: transparent;
+    }
+
+    .project-view-images {
+        padding: 20px 20px 20px 10px;
+        height: auto;
+        display: grid;
+        grid-column-start: 1;
+        grid-column-end: 6;
+        grid-row: auto;
+    }
+
+    .project-image {
+        max-width: 600px; /* set the maximum width of the images to 600px */
+        width: 100%; /* make the images fill the width of their container */
+        height: auto; /* make the height of the images adjust based on their aspect ratio */
+        cursor: pointer;
+        transition: 0.5s;
+        overflow-y: scroll;
+    }
+
+    .project-image:hover > :not(:hover) {
+        opacity: .4;
+    }
+
+    .project-selected-image-holder {
+        border-radius: 10px;
+        display: grid;
+        place-content: center;
+        max-height: fit-content;
+    }
+
+    .project-selected-image-itself {
+        border: 5px solid grey;
+        border-radius: 5px;
+
+    }
+
+    .project-view-description {
+        padding: 5px;
+        border: 2px solid grey;
+        height: 100%;
+        grid-column-start: 1;
+        grid-column-end: 6;
+        grid-row: auto;
+    }
+
+    .project-view-description-header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 5px;
+        top: 25%;
+    }
+
+    .project-view-description-text {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        margin: 5px;
+        font-size: clamp(1ch, 1vw, 2ch);
+    }
+
+    .project-view-itch {
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        grid-column-start: 1;
+        grid-column-end: 6;
+        grid-row: auto;
+    }
 }

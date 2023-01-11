@@ -7,8 +7,6 @@ import ProjectSelectedPhoto from "./utility/projectSelectedPhoto";
 
 
 const ProjectsView = (props) => {
-    const [isMobile] = useState(window.innerWidth <= 576);
-
     const handleOpenProject = props.handleOpenProject;
 
     const [selectedImage, setSelectedImage] = useState(null);
@@ -23,11 +21,6 @@ const ProjectsView = (props) => {
     }
     return (
         <>
-            {isMobile ? (
-                <Card>
-                    <div className="project-view-itch" dangerouslySetInnerHTML={{__html: project.itchLink}}/>
-                </Card>
-            ) : (
                 <Card className="interior-project-page-view" key={project.id}>
                     <Card className="project-view-header">
                         <h1 className="project-view-header-title">
@@ -59,7 +52,6 @@ const ProjectsView = (props) => {
                     </Card>
                     <div className="project-view-itch" dangerouslySetInnerHTML={{__html: project.itchLink}}/>
                 </Card>
-            )
             }
         </>
     );

@@ -23,7 +23,7 @@
     width: 100%;
     box-sizing: border-box;
     height: 9vh;
-    z-index: 999;
+    z-index: 1;
 }
 
 .navbar-brand {
@@ -52,12 +52,6 @@
     transition: all 0.3s;
 }
 
-.nav-link:hover {
-    background: #333;
-    color: #9ED2C6;
-    padding: 0 25px;
-}
-
 @media only screen and (max-width: 576px) {
 
     .navBarMain {
@@ -68,7 +62,7 @@
         width: 100%;
         box-sizing: border-box;
         height: 9vh;
-        z-index: 999;
+        z-index: 1;
     }
 
     .nav-link {
@@ -77,12 +71,6 @@
         font-weight: 600;
         transition: none;
         background: #9ED2C6;
-    }
-
-    .nav-link:hover {
-        background: #9ED2C6;
-        color: mintcream;
-        padding: 0 5px;
     }
 
     .nav-wording {
@@ -102,7 +90,8 @@
     color: white;
     text-shadow: 1px 1px 1px black;
     background: #9ED2C6;
-    border-radius: 5px;
+    padding: 5px;
+    border-radius: 10px;
 }
 
 .nav-wording:hover {
